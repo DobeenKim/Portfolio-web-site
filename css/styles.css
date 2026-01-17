@@ -1,0 +1,353 @@
+:root {
+  --background-color:#ede1d3;
+  --font-main-color:#1A1A1A;
+  --font-color:#ffff;
+  --point-color-pink: #ff7782;
+  --point-color-purple:#d3d3ff;
+  --point-color-mint:#b8e3e9;
+}
+
+a {
+  text-decoration: none;
+  color: var(--font-main-color);
+}
+
+
+@media (min-width:320px) {
+  .about__section {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 25%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .about_img {
+    width: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    margin: 0 auto;
+  }
+
+  .about_img img{
+    width: 100%;
+  }
+
+  .about_headline {
+    background-color: var(--point-color-purple);
+    display: inline;
+    padding: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 3rem;
+  }
+
+  .about_text {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .about_text p {  
+    line-height: 1.2;
+    margin: 0;
+  }
+
+  .char {
+    display: inline-block;
+  }
+
+  .cv_link {
+    background-color: var(--font-color);
+    padding:10px;
+    border-radius: 100vw;
+    font-size: 1rem;
+    font-family: ppneuemontreal;
+    font-weight: 200;
+    cursor: pointer;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .cv_link:hover {
+    background-color: var(--point-color-pink);
+    color: var(--font-color);
+  }
+
+  .skill_section {
+    width: 100%;
+    position: relative;
+    padding:70% 0 0;
+  }
+
+  .coading_Dobeen_img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .coading_Dobeen_img img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .skill_icon_box {
+    overflow: hidden;
+  }
+
+  .skill_icon_box p {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    width:15.5vw;
+    height: auto;
+  }
+
+  .skill_container {
+    padding: 20% 0 0 0;
+    text-align: center;
+  }
+
+  .skill_box {
+    padding-bottom: 24px;
+    font-size: 1.5rem;
+  }
+
+  .skill_box:nth-child(4) {
+    padding-bottom: 0px;
+  }
+
+  .skill_box p {
+    margin: 8px;
+  }
+
+  .html_icon img, .css_icon img,
+  .figma_icon img, .react_icon img,
+  .js_icon img, .git_icon img {
+    width: 100%;
+  }
+
+  .html_icon img {
+    transform: rotate(-15deg);
+  }
+
+  .css_icon img {
+    transform: rotate(5deg);
+  }
+
+  .figma_icon img {
+    transform: rotate(-9deg);
+  }
+
+  .react_icon img {
+    transform: rotate(7deg);
+  }
+
+  .js_icon img {
+    transform: rotate(12deg);
+  }
+
+  .skill_line {
+    background-color: var(--point-color-pink);
+    display: inline;
+    padding: 4px;
+  }
+
+  .skill_box:nth-child(2) .skill_line {
+    background-color: var(--point-color-mint);
+  }
+
+  .skill_box:nth-child(3) .skill_line {
+    background-color: var(--point-color-purple);
+  }
+
+  .skill_box:nth-child(4) .skill_line {
+    background-color: var(--font-color);
+  }
+
+  .button_box {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  .experience_button {
+    text-align: center;
+    background-color: var(--font-color);
+    padding: 8px;
+    border-radius: 100vw;
+    font-size: 1rem;
+    font-family: ppneuemontreal;
+    font-weight: 200;
+    width: 60vw;
+  }
+
+  .experience_button:hover {
+    background-color: var(--point-color-pink);
+    color: var(--font-color);
+  }
+
+  .arrow_icon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--point-color-pink);
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .arrow_icon img {
+    width: 100%;
+    padding: 20px;
+    transform: rotate(230deg);
+  }
+}
+
+@media (min-width:768px) {
+  .about__section {
+    margin-top: 15%;
+  }
+
+  .about_img {
+    width: 70%;
+  }
+
+  .about_text {
+    font-size: 2rem;
+    padding: 24px 0 32px 0;
+  }
+
+  .cv_link,
+  .experience_button {
+    font-size: 1.5rem;
+  }
+
+  .skill_section {
+    padding: 40% 0 0;
+  }
+
+  .coading_Dobeen_img  {
+    width: 80%;
+  }
+
+  .skill_container {
+    padding: 15% 0 0;
+  }
+  .skill_box {
+    font-size: 2rem;
+  }
+
+  .skill_icon_box p {
+    width: 10vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+  .experience_button {
+    width: 35vw;
+  }
+
+  .arrow_icon {
+    width: 5rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width:1024px) {
+  .about_text {
+    font-size: 2rem;
+    width: 71%;
+    margin: 0 auto;
+  }
+
+  .cv_link, .experience_button {
+    font-size: 1.5rem;
+  }
+
+  .skill_box {
+    font-size: 2.5rem;
+  }
+
+  .skill_container {
+    padding: 10% 0 0;
+  }
+
+  .coading_Dobeen_img {
+    width: 64%;
+  }
+
+  .experience_button {
+    width: 320PX;
+  }
+
+  .arrow_icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .about_img {
+    width: 55%;
+  }
+
+  .about_headline {
+    font-size: 3.5rem;
+  }
+
+  .about_text {
+    font-size: 2.5rem;
+  }
+
+  .skill_box {
+    font-size: 2.5rem;
+  }
+
+  .skill_icon_box p {
+    width: 8.5vw;
+  }
+
+  .coading_Dobeen_img {
+    width: 55%;
+  }
+
+  .cv_link, .experience_button {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width:1920px) {
+  .about_img {
+    width: 50%;
+  }
+
+  .skill_box {
+  font-size: 2.5rem;
+}
+
+  .coading_Dobeen_img {
+    width: 40%;
+  }
+
+  .skill_icon_box p {
+    width: 6vw;
+  }
+
+  .cv_link, .experience_button {
+    font-size: 2rem;
+  }
+
+  .experience_button {
+    width: 20vw;
+  }
+}
