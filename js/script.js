@@ -1,51 +1,81 @@
-let openButton = document.querySelector(".menu__icon");
-let closeButton = document.querySelector(".close_icon");
-let openedMenu = document.querySelector(".opened_menu ");
+const menuBtn = document.querySelector('.menu-btn'); 
+const openedMenu = document.querySelector('.opened_menu'); 
+const lines = document.querySelectorAll('.line');
+const menuLinks = document.querySelectorAll('.menu_wrap p');
 
-openButton.addEventListener("click",() => {
-  openedMenu.classList.add("on")
-  document.body.style.overflow = `hidden`;
+let isOpen = false;
+
+const tl = gsap.timeline({ paused: true });
+
+tl.to(openedMenu, { 
+    autoAlpha: 1, 
+    duration: 0.2, 
+    ease: "power2.inOut" 
+  })
+  .from(menuLinks, { 
+    y: 30, 
+    opacity: 0, 
+    stagger: 0.1, 
+    duration: 0.5, 
+    ease: "power2.out" 
+  }, "-=0.3")
+  .to(lines[1], { opacity: 0, duration: 0.2 }, 0)
+  .to(lines[0], { y: 10, rotation: 45, duration: 0.2 }, 0)
+  .to(lines[2], { y: -10, rotation: -45, duration: 0.2 }, 0);
+
+
+menuBtn.addEventListener('click', () => {
+
+const isNewOpen = openedMenu.classList.toggle(`on`);
+isOpen = isNewOpen;
+
+  if (isNewOpen) {
+    tl.play();
+    document.body.style.overflow = "hidden"; 
+  } else {
+    tl.reverse();
+    document.body.style.overflow = "auto";   
+  }
 });
 
-closeButton.addEventListener("click",() => {
-openedMenu.classList.remove("on")
-document.body.style.overflow = `auto`
-});
+
 
 
 // move to section
-let contactBtn = document.querySelector(".contactBtn")
-let aboutBtn = document.querySelector(".aboutBtn")
-let viewBtn = document.querySelector(".experience_button")
+const contactBtn = document.querySelector(".contactBtn");
+const aboutBtn = document.querySelector(".aboutBtn");
+const viewBtn = document.querySelector(".experience_button");
 
 function scrollToSection(e, target) {
   const section = document.querySelector(target);
-  const menuPage = document.querySelector(".opened_menu");
 
-  if (menuPage) {
-    menuPage.classList.remove("on");
+  if (isOpen) {
+    openedMenu.classList.remove(`on`)
+    tl.reverse();
     document.body.style.overflow = "auto";
+    isOpen = false;
   }
 
   if (section) {
     e.preventDefault();
     let goTo = section.offsetTop;
     window.scroll({
-      top : goTo,
-      behavior :`smooth`
+      top: goTo,
+      behavior: "smooth"
     });
   } else {
-
     if(target === "#projects_section") {
       window.location.href = `project.html${target}`;
     } else {
-      window.location.href = `index.html${target}`
+      window.location.href = `index.html${target}`;
     }
-  } 
+  }
 }
+
 if (aboutBtn) aboutBtn.onclick = (e) => scrollToSection(e, "#about__section");
 if (contactBtn) contactBtn.onclick = (e) => scrollToSection(e, "#contact");
-if (viewBtn) viewBtn.onclick = (e) => scrollToSection(e, "#projects_section");
+if (viewBtn) viewBtn
+
 
 
 
@@ -91,6 +121,9 @@ mm.add({
   });
 });
 
+
+
+
 // moving animation
 const elements = document.querySelectorAll(`.moveImg`);
 
@@ -127,6 +160,9 @@ function animate() {
 }
 
 requestAnimationFrame(animate)
+
+
+
 
 // API
 const username = `DobeenKim`
@@ -172,6 +208,7 @@ fetchData()
 
 
 
+
 // typing animation (scrolla)
 gsap.registerPlugin(ScrollTrigger);
 
@@ -181,11 +218,10 @@ gsap.from(text.chars, {
   scrollTrigger: {
     trigger: ".about_text", 
     start: "top 85%",       
-    end: "bottom 100%",      
-    scrub: 1,                        
+    end: "bottom 90%",      
+    scrub: 2,                        
   },
   opacity: 0,             
   stagger: 0.5,             
   duration: 1
 });
-
