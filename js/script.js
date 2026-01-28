@@ -185,7 +185,7 @@ const fetchData = async() => {
       container.innerHTML += `
         <div class="container">
           <p class="project_img">
-            <img src="./img/${repo.name}.svg" alt="${repo.name}" width="300px" height="auto">
+            <img src="./img/${repo.name}.png" alt="${repo.name}" width="300px" height="auto">
           </p>
           <div class= "text_box"> 
             <h2 class ="name">${repo.name}</h2>
