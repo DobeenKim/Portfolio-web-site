@@ -103,7 +103,7 @@ body {
     width: 40px;
     display: flex;
     flex-direction: column;
-    gap: 8px; /* 선 사이의 간격을 6px로 일정하게 유지 */
+    gap: 8px; 
     z-index: 1000;
   }
 
