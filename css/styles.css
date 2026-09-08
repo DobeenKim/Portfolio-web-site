@@ -206,6 +206,9 @@ a {
 
   .experience_button:hover {
     background-color: var(--point-color-pink);
+  }
+
+  .experience_button:hover p {
     color: var(--font-color);
   }
 
