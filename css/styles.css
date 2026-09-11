@@ -12,6 +12,14 @@ a {
   color: var(--font-main-color);
 }
 
+.word {
+    white-space: nowrap;
+    display: inline-block;
+  }
+
+  .char {
+    display: inline-block;
+  }
 
 @media (min-width:320px) {
   .about__section {
@@ -39,7 +47,6 @@ a {
     background-color: var(--point-color-purple);
     display: inline;
     padding: 5px;
-    font-size: 1.5rem;
     font-weight: bold;
     margin: 0 auto;
     width: fit-content;

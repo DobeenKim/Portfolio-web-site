@@ -38,9 +38,6 @@ isOpen = isNewOpen;
   }
 });
 
-
-
-
 // move to section
 const contactBtn = document.querySelector(".contactBtn");
 const aboutBtn = document.querySelector(".aboutBtn");
@@ -75,9 +72,6 @@ function scrollToSection(e, target) {
 if (aboutBtn) aboutBtn.onclick = (e) => scrollToSection(e, "#about__section");
 if (contactBtn) contactBtn.onclick = (e) => scrollToSection(e, "#contact");
 if (viewBtn) viewBtn
-
-
-
 
 // skill section icon animation
 gsap.registerPlugin(ScrollTrigger);
@@ -121,9 +115,6 @@ mm.add({
   });
 });
 
-
-
-
 // moving animation
 const elements = document.querySelectorAll(`.moveImg`);
 
@@ -160,9 +151,6 @@ function animate() {
 }
 
 requestAnimationFrame(animate)
-
-
-
 
 // API
 const username = `DobeenKim`
@@ -206,13 +194,10 @@ const fetchData = async() => {
 }
 fetchData()
 
-
-
-
 // typing animation (scrolla)
 gsap.registerPlugin(ScrollTrigger);
 
-const text = new SplitType('.about_text p', { types: 'chars' });
+const text = new SplitType('.about_text p', { types: 'words, chars' });
 
 gsap.from(text.chars, {
   scrollTrigger: {
