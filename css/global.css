@@ -130,6 +130,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     box-sizing: border-box;
+    z-index: 1000;
   }
 
   .menu_wrap {
